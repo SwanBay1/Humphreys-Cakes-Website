@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#001737" />
+  <title>Humphrey’s Cakes</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <img class="brand-logo" src="Assets/Logo1.png" alt="Humphrey’s Cakes logo" />
+      </a>
+
+      <div class="brand-name">Humphrey’s Cakes</div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="#cakes">Cakes</a>
+        <a class="nav-link" href="#reserve">Information</a>
+        <a class="nav-cta" href="#reserve">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero-section scroll-target" aria-label="Hero">
+      <div class="page-shell">
+        <div class="hero-card">
+          <div class="hero-grid">
+            <!-- Left column -->
+            <div>
+              <div class="hero-media media media--hero" aria-label="Hero image">
+                <img src="Assets/PosterCake.jpg" alt="A signature cake from Humphrey’s Cakes" />
+              </div>
+
+              <div class="hero-copy-card">
+                <h1>Humphrey’s Cakes</h1>
+                <h2>Where Every Slice Is A Statement</h2>
+                <p>
+                  Indulge in refined flavours and timeless presentation: explore signature cakes,
+                  bespoke luxury creations, or efficient bulk options tailored for discerning hosts.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right column -->
+            <aside class="experience-card" aria-label="Begin your experience">
+              <div class="experience-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#001737" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7l4.5 4L12 4l4.5 7L21 7v10H3V7z"></path>
+                  <path d="M3 17h18"></path>
+                </svg>
+              </div>
+
+              <div class="experience-title">Begin Your Experience</div>
+              <div class="divider" aria-hidden="true"></div>
+
+              <a class="browse-btn" href="#cakes" aria-label="Browse cakes">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6 7h12l1 14H5L6 7z"></path>
+                  <path d="M9 7a3 3 0 0 1 6 0"></path>
+                </svg>
+                Browse Cakes
+              </a>
+
+              <div class="divider" aria-hidden="true"></div>
+              <div class="tagline">
+                Elegant craftsmanship<span class="dot">•</span><br/>
+                No cake goes to waste<span class="dot">•</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAKES -->
+    <section id="cakes" class="cakes-section scroll-target" aria-label="Cakes">
+      <div class="page-shell">
+        <div class="section-heading">
+          <h2>Our Signature Collection</h2>
+        </div>
+
+        <div class="cakes-grid">
+          <!-- Red Velvet (featured / tall) -->
+          <a class="cake-card cake-card--tall cake-card--red cake-link" href="redvelvet.html" aria-label="Red Velvet">
+            <div class="cake-media">
+              <div class="media media--tall">
+                <img src="Assets/RedVelvet.jpg" alt="Red Velvet cake" />
+              </div>
+            </div>
+            <div class="cake-body">
+              <h3 class="cake-title">Red Velvet</h3>
+              <p class="cake-desc">Delicious… (add stuff here)</p>
+              <div class="cake-meta">
+                <span>Serves 12</span>
+                <span>21cm</span>
+                <span>£20 each</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banana Bread -->
+          <a class="cake-card cake-card--small cake-card--banana cake-link" href="bananabread.html" aria-label="Banana Bread">
+            <div class="cake-media">
+              <div class="media media--square">
+                <img src="Assets/BananaBread.jpg" alt="Banana Bread cake" />
+              </div>
+            </div>
+            <div class="cake-body">
+              <h3 class="cake-title">Banana Bread</h3>
+              <p class="cake-desc">A chocolate filled banana bread.</p>
+              <div class="cake-meta">
+                <span>Serves 4</span>
+                <span>&nbsp;</span>
+                <span>From £5</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Chocolate Cake -->
+          <a class="cake-card cake-card--small cake-card--dark cake-link" href="ChocolateCake.html" aria-label="Chocolate Cake">
+            <div class="cake-media">
+              <div class="media media--square">
+                <img src="Assets/ChocolateCake.jpg" />
+              </div>
+            </div>
+            <div class="cake-body">
+              <h3 class="cake-title">Chocolate Cake</h3>
+              <p class="cake-desc">A something something</p>
+              <div class="cake-meta">
+                <span>Serves 10–12</span>
+                <span>&nbsp;</span>
+                <span>£15 Each</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Carrot Cake -->
+          <a class="cake-card cake-card--small cake-card--petit cake-link" href="CarrotCake.html" aria-label="Carrot Cake">
+            <div class="cake-media">
+              <div class="media media--square">
+                <img src="Assets/CarrotCake.jpg" />
+              </div>
+            </div>
+            <div class="cake-body">
+              <h3 class="cake-title">Carrot Cake</h3>
+              <p class="cake-desc">A familly recipe.</p>
+              <div class="cake-meta">
+                <span>Serves 3</span>
+                <span>&nbsp;</span>
+                <span>From £5</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Golden Flapjacks -->
+          <a class="cake-card cake-card--small cake-card--golden cake-link" href="Flapjacks.html" aria-label="Golden Flapjacks">
+            <div class="cake-media">
+              <div class="media media--square">
+                <img src="Assets/Flapjacks.jpg" />
+              </div>
+            </div>
+            <div class="cake-body">
+              <h3 class="cake-title">Golden Flapjacks</h3>
+              <p class="cake-desc">Flappy.</p>
+              <div class="cake-meta">
+                <span>Serves 14–18</span>
+                <span>&nbsp;</span>
+                <span>From £5</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Royal Victoria Sponge (NOW tall like Red Velvet) -->
+          <a class="cake-card cake-card--tall cake-card--victoria cake-link" href="VictoriaSponge.html" aria-label="Royal Victoria Sponge">
+            <div class="cake-media">
+              <div class="media media--tall">
+                <img src="Assets/RoyalVictoriaSponge.jpg" alt="Royal Victoria Sponge" />
+              </div>
+            </div>
+            <div class="cake-body">
+              <h3 class="cake-title">Royal Victoria Sponge</h3>
+              <p class="cake-desc">A fluffy and sweet Victoria Sponge that keeps to tradition.</p>
+              <div class="cake-meta">
+                <span>Serves 12</span>
+                <span>21cm</span>
+                <span>£20 each</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Coming Soon (space for a future cake) -->
+          <article class="cake-card cake-card--small cake-card--coming" aria-label="Coming soon">
+            <div class="cake-media">
+              <div class="media media--square">
+                <div class="media-placeholder">Coming soon</div>
+              </div>
+            </div>
+            <div class="cake-body">
+              <h3 class="cake-title">Coming soon</h3>
+              <p class="cake-desc">&nbsp;</p>
+              <div class="cake-meta">
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVE / INFORMATION / CONTACT -->
+    <section id="reserve" class="reserve-section scroll-target" aria-label="Reserve and contact">
+      <div class="page-shell">
+        <div class="reserve-card">
+          <div class="reserve-grid">
+            <!-- Left -->
+            <div>
+              <h2 class="reserve-title">Reserve Your Confection</h2>
+              <p class="reserve-lead">
+                For bespoke creations, corporate quantities, or a single indulgent
+              </p>
+
+              <div class="subhead">What We Need to Start</div>
+              <ul class="needs">
+                <li>Cake selection or inspiration</li>
+                <li>Event date &amp; time</li>
+                <li>Collection preference</li>
+                <li>Guest count &amp; portioning</li>
+                <li>Allergy and dietary requirements</li>
+              </ul>
+
+              <div class="allergy-pill" aria-label="Please notify about allergies">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#001737" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z"></path>
+                </svg>
+                Please Notify About Allergies
+              </div>
+
+              <div class="socials" aria-label="Social links">
+                <button class="social-btn" type="button" aria-label="Facebook (placeholder)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 8h3V5h-3c-2 0-4 2-4 4v3H7v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1z"></path>
+                  </svg>
+                </button>
+
+                <button class="social-btn" type="button" aria-label="Instagram (placeholder)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+                    <path d="M16 11.5a4 4 0 1 1-7.8 1.4A4 4 0 0 1 16 11.5z"></path>
+                    <path d="M17.5 6.5h.01"></path>
+                  </svg>
+                </button>
+
+                <button class="social-btn" type="button" aria-label="Twitter/X (placeholder)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 19L19 5"></path>
+                    <path d="M7 5h5l5 14h-5L7 5z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right -->
+            <div>
+              <div class="contact-title">Contact Options</div>
+
+              <a class="contact-pill" href="mailto:info@humphreyscakes.co.uk" aria-label="Email Humphrey’s Cakes">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16v16H4z"></path>
+                  <path d="M22 6l-10 7L2 6"></path>
+                </svg>
+                info@humphreyscakes.co.uk
+              </a>
+
+              <a class="contact-pill" href="tel:+447529157278" aria-label="Call Humphrey’s Cakes">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L9 10a16 16 0 0 0 5 5l.6-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"></path>
+                </svg>
+                +44 7529 157278
+              </a>
+
+              <details class="faq">
+                <summary>
+                  How far in advance should I order?
+                  <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </summary>
+                <div class="faq-body">
+                  <p>For best availability, enquire 3 days ahead.</p>
+                </div>
+              </details>
+
+              <details class="faq">
+                <summary>
+                  Do you offer delivery?
+                  <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </summary>
+                <div class="faq-body">
+                  <p>
+                    All cakes are collection only. The collection address is SA3 4AH at our home bakery.
+                    Delivery will be coming soon.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" aria-label="Footer">
+      © <span id="year"></span> Humphrey’s Cakes · humphreyscakes.co.uk
+    </footer>
+  </main>
+</body>
+</html>
