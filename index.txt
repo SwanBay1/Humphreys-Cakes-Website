@@ -116,9 +116,9 @@
             </div>
             <div class="cake-body">
               <h3 class="cake-title">Banana Bread</h3>
-              <p class="cake-desc">A chocolate filled banana bread.</p>
+              <p class="cake-desc">Banana bread wih a rich chocolate layer.</p>
               <div class="cake-meta">
-                <span>Serves 4</span>
+                <span>Serves 6</span>
                 <span>&nbsp;</span>
                 <span>From £5</span>
               </div>
