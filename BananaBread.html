@@ -27,7 +27,6 @@
 
       --max:1180px;
 
-      /* Matches your index header size */
       --header-h:120px;
     }
 
@@ -39,6 +38,7 @@
       color:var(--text);
       background:var(--page-bg);
       padding-top:var(--header-h);
+      overflow-x:hidden; /* prevents unwanted horizontal scroll */
     }
 
     a{ color:inherit; text-decoration:none; }
@@ -48,7 +48,7 @@
       margin:0 auto;
     }
 
-    /* Header (same as index) */
+    /* HEADER (MATCHES INDEX) */
     .site-header{
       position:fixed;
       left:0; top:0; right:0;
@@ -119,59 +119,38 @@
     }
     .nav-cta:hover{ transform: translateY(-1px); filter:brightness(1.02); }
 
-    /* Page content */
-    .cake-page{
-      padding: 36px 0 56px;
+    @media (max-width:620px){
+      .header-inner{
+        grid-template-columns:130px 1fr;
+        gap:10px 14px;
+        padding:10px 16px;
+      }
+      .nav{ display:none; }
+      .brand-name{ text-align:left; font-size:22px; }
     }
+
+    /* PAGE */
+    .cake-page{ padding:36px 0 56px; }
     .cake-card{
       background:var(--panel);
       border-radius:var(--radius-xl);
       box-shadow:var(--shadow);
       border:1px solid rgba(0,0,0,.06);
-      padding: 34px;
+      padding:34px;
     }
-
     .cake-grid{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 34px;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
       align-items:start;
     }
 
-    /* Aristocratic framing */
-    .crest-line{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom: 14px;
-      color: var(--muted);
-    }
-    .crest-line .rule{
-      height:1px;
-      background: rgba(0,0,0,.18);
-      flex:1;
-    }
-    .crest-line .crest{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight:700;
-      letter-spacing:.35px;
-      font-size: 12.5px;
-      text-transform:uppercase;
-      opacity:.95;
-      white-space:nowrap;
-    }
-    .crest svg{ opacity:.9; }
-
-    /* Gallery */
     .gallery{
       background:var(--soft);
       border:1px solid rgba(0,0,0,.12);
       border-radius:var(--radius-lg);
-      padding: 16px;
+      padding:16px;
     }
-
     .media-frame{
       position:relative;
       width:100%;
@@ -179,7 +158,7 @@
       overflow:hidden;
       border:1px solid rgba(0,0,0,.12);
       background:#ddd;
-      aspect-ratio: 4 / 3;
+      aspect-ratio:4/3;
     }
     .media-frame img{
       position:absolute;
@@ -187,251 +166,164 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      display:block;
     }
 
     .gallery-controls{
       display:flex;
       justify-content:space-between;
       align-items:center;
+      margin-top:12px;
       gap:12px;
-      margin-top: 12px;
     }
 
     .gallery-btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding: 10px 14px;
+      padding:10px 14px;
       border-radius:10px;
       border:1px solid rgba(0,0,0,.14);
-      background: #fff;
-      color:#1c1f24;
+      background:#fff;
       font-weight:700;
-      font-size: 13.5px;
       cursor:pointer;
-      transition: transform .12s ease, filter .12s ease;
       box-shadow:0 8px 16px rgba(0,0,0,.06);
-      user-select:none;
-    }
-    .gallery-btn:hover{ transform: translateY(-1px); filter:brightness(1.02); }
-    .gallery-btn:disabled{
-      opacity:.5;
-      cursor:not-allowed;
-      transform:none;
-      box-shadow:none;
     }
 
     .gallery-counter{
-      font-size: 12.5px;
-      color: var(--muted);
-      text-align:center;
+      font-size:12.5px;
+      color:var(--muted);
       flex:1;
-      opacity:.95;
+      text-align:center;
     }
 
     .thumb-row{
       display:flex;
       gap:10px;
-      margin-top: 12px;
-      overflow:auto;
-      padding-bottom: 2px;
+      margin-top:12px;
+      overflow-x:auto;
     }
     .thumb{
-      width: 74px;
-      height: 56px;
+      width:74px;
+      height:56px;
       border-radius:10px;
       border:1px solid rgba(0,0,0,.16);
       overflow:hidden;
-      background:#ddd;
+      flex:0 0 auto;
       cursor:pointer;
-      flex: 0 0 auto;
-      opacity:.88;
-      transition: transform .12s ease, opacity .12s ease;
-    }
-    .thumb:hover{ transform: translateY(-1px); opacity:1; }
-    .thumb.is-active{
-      outline: 2px solid rgba(243,179,40,.85);
-      opacity:1;
     }
     .thumb img{
       width:100%;
       height:100%;
       object-fit:cover;
-      display:block;
     }
 
-    /* Details / right side */
     .details{
       background:var(--soft-2);
       border:1px solid rgba(0,0,0,.12);
       border-radius:var(--radius-lg);
-      padding: 22px 22px 20px;
+      padding:22px;
     }
 
     .cake-title{
       margin:0;
-      font-size: 42px;
-      line-height:1.04;
-      letter-spacing:.2px;
+      font-size:42px;
     }
 
     .subtitle{
-      margin: 8px 0 14px;
-      font-size: 13px;
+      margin:8px 0 18px;
+      font-size:13px;
       font-weight:700;
       letter-spacing:.65px;
       text-transform:uppercase;
-      color:#1c1f24;
-      opacity:.95;
     }
 
-    .prose{
-      margin:0 0 14px;
-      color: var(--muted);
-      font-size: 14.2px;
-      line-height:1.6;
-    }
-
-    .facts{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px 14px;
-      margin: 14px 0 16px;
-      padding: 14px;
+    /* ===== BANANA BREAD PRICING BLOCK (EASY TO REMOVE FOR OTHER CAKES) ===== */
+    .pricing-card{
+      margin:18px 0 22px;
+      padding:18px;
       border-radius:var(--radius-md);
-      background: rgba(255,255,255,.65);
-      border:1px solid rgba(0,0,0,.10);
+      background:#fff;
+      border:1px solid rgba(0,0,0,.12);
+      box-shadow:0 8px 18px rgba(0,0,0,.05);
     }
-    .fact{
-      font-size: 13px;
-      color: var(--muted);
-      display:flex;
-      gap:8px;
-      align-items:baseline;
-    }
-    .fact b{
-      color:#1c1f24;
+    .pricing-title{
+      font-size:14px;
       font-weight:700;
-      min-width: 74px;
-    }
-
-    .contact-title{
-      margin: 18px 0 12px;
-      font-size: 14px;
-      font-weight:700;
-      letter-spacing:.35px;
+      letter-spacing:.4px;
       text-transform:uppercase;
-      color:#1c1f24;
+      margin-bottom:12px;
     }
+    .price-row{
+      display:flex;
+      justify-content:space-between;
+      padding:8px 0;
+      border-bottom:1px solid rgba(0,0,0,.08);
+      font-size:14px;
+    }
+    .price-row:last-child{ border-bottom:none; }
+    .price-amount{
+      font-weight:700;
+      color:var(--royal-blue);
+    }
+    .price-meta{
+      font-size:12.5px;
+      color:var(--muted);
+      margin-top:10px;
+      line-height:1.5;
+    }
+    /* ===== END PRICING BLOCK ===== */
 
     .contact-pill{
       display:flex;
       align-items:center;
       gap:12px;
-      padding: 14px 16px;
+      padding:14px 16px;
       border-radius:10px;
-      background: var(--royal-blue);
+      background:var(--royal-blue);
       color:#fff;
-      border:1px solid rgba(255,255,255,.16);
-      box-shadow:0 12px 18px rgba(0,0,0,.12);
       font-weight:700;
-      font-size: 14px;
-      margin-bottom: 12px;
+      margin-bottom:12px;
     }
-    .contact-pill svg{ flex:0 0 auto; }
 
     .cta-row{
-      display:flex;
-      gap:12px;
-      margin-top: 14px;
-      flex-wrap:wrap;
+      margin-top:16px;
     }
 
     .soft-cta{
       display:inline-flex;
       align-items:center;
       gap:10px;
-      padding: 12px 14px;
+      padding:12px 14px;
       border-radius:10px;
-      background: #fff;
+      background:#fff;
       border:1px solid rgba(0,0,0,.14);
-      box-shadow:0 10px 18px rgba(0,0,0,.06);
       font-weight:700;
-      font-size: 13.5px;
-      cursor:pointer;
-      transition: transform .12s ease, filter .12s ease;
-    }
-    .soft-cta:hover{ transform: translateY(-1px); filter:brightness(1.02); }
-
-    .note{
-      margin-top: 12px;
-      font-size: 12.8px;
-      color: var(--muted);
-      opacity:.95;
     }
 
-    /* Footer */
     .site-footer{
-      padding: 18px 0 28px;
+      padding:18px 0 28px;
       text-align:center;
-      color:#2b3038;
-      font-size: 12px;
+      font-size:12px;
       opacity:.9;
     }
     .site-footer span{
-      color: var(--gold);
+      color:var(--gold);
       font-weight:700;
     }
 
-    /* Responsive */
-    @media (max-width: 980px){
-      .cake-grid{ grid-template-columns: 1fr; }
-      .cake-title{ font-size: 38px; }
-    }
-
-    @media (max-width: 620px){
-      :root{ --header-h:130px; }
-
-      .header-inner{
-        grid-template-columns: 130px 1fr;
-        grid-template-rows: auto auto;
-        gap: 10px 14px;
-        align-content:center;
-        padding: 10px 16px;
-      }
-      .nav{
-        grid-column: 1 / -1;
-        justify-content:flex-end;
-        gap: 10px;
-      }
-      .brand-name{ text-align:left; font-size: 22px; }
-      .page-shell{ width:min(var(--max), calc(100% - 30px)); }
-
-      .cake-card{ padding: 22px; }
-      .cake-title{ font-size: 34px; }
-
-      .facts{ grid-template-columns: 1fr; }
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      html{ scroll-behavior:auto; }
-      .gallery-btn, .soft-cta, .thumb{ transition:none; }
+    @media (max-width:980px){
+      .cake-grid{ grid-template-columns:1fr; }
+      .cake-title{ font-size:36px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- HEADER (same as index) -->
+
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <a class="brand" href="index.html#top" aria-label="Go to home page">
+      <a class="brand" href="index.html#top">
         <img class="brand-logo" src="Assets/Logo1.png" alt="Humphrey’s Cakes logo" />
       </a>
-
       <div class="brand-name">Humphrey’s Cakes</div>
-
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav">
         <a class="nav-link" href="index.html#cakes">Cakes</a>
         <a class="nav-link" href="index.html#reserve">Information</a>
         <a class="nav-cta" href="index.html#reserve">Contact Us</a>
@@ -441,124 +333,98 @@
 
   <main class="cake-page">
     <div class="page-shell">
-      <section class="cake-card" aria-label="Banana Bread cake page">
-        <div class="crest-line" aria-hidden="true">
-          <div class="rule"></div>
-          <div class="crest">
-            <!-- small crown -->
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2b3038" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 7l4.5 4L12 4l4.5 7L21 7v10H3V7z"></path>
-              <path d="M3 17h18"></path>
-            </svg>
-            Signature Confection
-          </div>
-          <div class="rule"></div>
-        </div>
-
+      <section class="cake-card">
         <div class="cake-grid">
-          <!-- LEFT: GALLERY -->
-          <div class="gallery" aria-label="Cake image gallery">
+
+          <!-- GALLERY -->
+          <div class="gallery">
             <div class="media-frame">
-              <img id="mainImage" src="" alt="Banana Bread cake image" />
+              <img id="mainImage" src="" alt="Banana Bread image">
             </div>
 
             <div class="gallery-controls">
-              <button id="prevBtn" class="gallery-btn" type="button" aria-label="Previous image">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M15 18l-6-6 6-6"></path>
-                </svg>
-                Back
-              </button>
-
-              <div class="gallery-counter" id="counterText">Image 1 of 1</div>
-
-              <button id="nextBtn" class="gallery-btn" type="button" aria-label="Next image">
-                Forward
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M9 18l6-6-6-6"></path>
-                </svg>
-              </button>
+              <button id="prevBtn" class="gallery-btn">Back</button>
+              <div class="gallery-counter" id="counterText"></div>
+              <button id="nextBtn" class="gallery-btn">Forward</button>
             </div>
 
-            <div class="thumb-row" id="thumbRow" aria-label="Thumbnails"></div>
+            <div class="thumb-row" id="thumbRow"></div>
           </div>
 
-          <!-- RIGHT: DETAILS + CONTACT -->
-          <aside class="details" aria-label="Cake details and contact options">
+          <!-- DETAILS -->
+          <aside class="details">
             <h1 class="cake-title">Banana Bread</h1>
             <div class="subtitle">With a rich chocolate layer</div>
 
-          
-            <div class="facts" aria-label="Key details">
-              <div class="fact"><b>Serves</b><span>6</span></div>
-              <div class="fact"><b>Sizes</b><span>Regular or large</span></div>
-              <div class="fact"><b>From</b><span>£6/1 £5/2</span></div>
+            <!-- ===== BANANA BREAD PRICING BLOCK ===== -->
+            <div class="pricing-card">
+              <div class="pricing-title">Available Sizes & Pricing</div>
 
+              <div class="price-row">
+                <div>
+                  <strong>Regular</strong><br>
+                  <small>500g · Serves 6</small>
+                </div>
+                <div class="price-amount">£6 each</div>
+              </div>
 
-                          </div>
+              <div class="price-row">
+                <div>
+                  <strong>Regular (2+)</strong><br>
+                  <small>500g · Serves 6 each</small>
+                </div>
+                <div class="price-amount">£5 each</div>
+              </div>
 
-            <div class="contact-title">Contact Options</div>
+              <div class="price-row">
+                <div>
+                  <strong>Large</strong><br>
+                  <small>900g · Serves 24</small>
+                </div>
+                <div class="price-amount">£15</div>
+              </div>
 
-            <a class="contact-pill" href="mailto:info@humphreyscakes.co.uk" aria-label="Email Humphrey’s Cakes">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16v16H4z"></path>
-                <path d="M22 6l-10 7L2 6"></path>
-              </svg>
+              <div class="price-meta">
+                Crafted in small batches for refined occasions.  
+                Ideal for private gatherings, estate teas, or distinguished corporate hosting.
+              </div>
+            </div>
+            <!-- ===== END PRICING BLOCK ===== -->
+
+            <a class="contact-pill" href="mailto:info@humphreyscakes.co.uk">
               info@humphreyscakes.co.uk
             </a>
 
-            <a class="contact-pill" href="tel:+447529157278" aria-label="Call Humphrey’s Cakes">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L9 10a16 16 0 0 0 5 5l.6-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"></path>
-              </svg>
+            <a class="contact-pill" href="tel:+447529157278">
               +44 7529 157278
             </a>
 
-            <div class="cta-row" aria-label="Quick actions">
-              <a class="soft-cta" href="index.html#cakes" aria-label="Back to cakes list">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M15 18l-6-6 6-6"></path>
-                </svg>
+            <div class="cta-row">
+              <a class="soft-cta" href="index.html#cakes">
                 Back to Cakes
-              </a>
-
-              <a class="soft-cta" href="index.html#reserve" aria-label="Go to reservation section">
-                Reserve / Enquire
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1c1f24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14"></path>
-                  <path d="M13 5l7 7-7 7"></path>
-                </svg>
               </a>
             </div>
 
-                     </aside>
+          </aside>
         </div>
       </section>
 
-      <footer class="site-footer" aria-label="Footer">
+      <footer class="site-footer">
         © <span id="year"></span> Humphrey’s Cakes · humphreyscakes.co.uk
       </footer>
     </div>
   </main>
 
   <script>
-    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    /**
-     * TEMPLATE CONFIG (easy to add/remove images)
-     * Add/remove items in this array for each cake page.
-     * Keep paths relative to your BananaBread.html file.
-     */
     const images = [
       "Assets/BananaBread/BananaBread.jpg",
       "Assets/BananaBread/BananaBread2.jpg",
       "Assets/BananaBread/BananaBread3.jpg",
       "Assets/BananaBread/BananaBread4.jpg"
-     
     ];
 
-    // ---- Gallery logic ----
     const mainImage = document.getElementById("mainImage");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
@@ -567,73 +433,35 @@
 
     let index = 0;
 
-    function renderThumbs() {
-      thumbRow.innerHTML = "";
-      images.forEach((src, i) => {
-        const t = document.createElement("button");
-        t.type = "button";
-        t.className = "thumb" + (i === index ? " is-active" : "");
-        t.setAttribute("aria-label", `View image ${i + 1}`);
-        t.addEventListener("click", () => {
-          index = i;
-          updateGallery();
-        });
-
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = "Thumbnail " + (i + 1);
+    function renderThumbs(){
+      thumbRow.innerHTML="";
+      images.forEach((src,i)=>{
+        const t=document.createElement("div");
+        t.className="thumb";
+        t.onclick=()=>{ index=i; updateGallery(); };
+        const img=document.createElement("img");
+        img.src=src;
         t.appendChild(img);
-
         thumbRow.appendChild(t);
       });
     }
 
-    function updateButtons() {
-      // If you prefer looping instead of disabling ends, change this logic.
-      prevBtn.disabled = (index === 0);
-      nextBtn.disabled = (index === images.length - 1);
-    }
-
-    function updateCounter() {
-      counterText.textContent = `Image ${Math.min(index + 1, images.length)} of ${images.length}`;
-    }
-
-    function updateMainImage() {
-      const safeIndex = Math.max(0, Math.min(index, images.length - 1));
-      index = safeIndex;
-
-      mainImage.src = images[index] || "";
-      mainImage.alt = `Banana Bread cake image ${index + 1}`;
-    }
-
-    function updateGallery() {
-      updateMainImage();
-      updateButtons();
-      updateCounter();
+    function updateGallery(){
+      if(index<0) index=images.length-1;
+      if(index>=images.length) index=0;
+      mainImage.src=images[index];
+      counterText.textContent=`Image ${index+1} of ${images.length}`;
       renderThumbs();
     }
 
-    prevBtn.addEventListener("click", () => {
-      if (index > 0) {
-        index -= 1;
-        updateGallery();
-      }
+    prevBtn.onclick=()=>{ index--; updateGallery(); };
+    nextBtn.onclick=()=>{ index++; updateGallery(); };
+
+    document.addEventListener("keydown",(e)=>{
+      if(e.key==="ArrowLeft") prevBtn.click();
+      if(e.key==="ArrowRight") nextBtn.click();
     });
 
-    nextBtn.addEventListener("click", () => {
-      if (index < images.length - 1) {
-        index += 1;
-        updateGallery();
-      }
-    });
-
-    // Keyboard support (left/right arrows)
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") prevBtn.click();
-      if (e.key === "ArrowRight") nextBtn.click();
-    });
-
-    // Initialise
     updateGallery();
   </script>
 </body>

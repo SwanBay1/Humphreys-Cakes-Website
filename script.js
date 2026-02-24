@@ -13,11 +13,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
-  // Social placeholders
-  document.querySelectorAll(".social-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      alert("Add your social media links here (Facebook / Instagram / X).");
-    });
-  });
 });
